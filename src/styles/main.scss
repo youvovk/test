@@ -2,6 +2,94 @@
 @import "fonts";
 @import "typography";
 
-body {
-  background: $c-gray;
+.people {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 210px));
+  justify-content: center;
+  grid-gap: 30px;
+
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: #2F4F4F;
+}
+
+.person {
+    padding: 6px;
+    height: 225px;
+    overflow: hidden;
+    transition: widtn 1s linear, transform 1s linear;
+}
+
+.person:hover {
+    width: 264px;
+    height: 320px;
+    background: #EEEEEE;
+    border-radius: 10px;
+    z-index: 1;
+    overflow: visible;
+}
+
+.img:hover {
+    width: 240px;
+    height: 240px;
+    border-radius: 25%;
+}
+
+.img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.photo {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.rank {
+    position: absolute;
+    right: 20px;
+    bottom: 95px;
+    color: #8B0000;
+}
+
+.rank--ten {
+    right: 16px;
+}
+
+.circle--white {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 10px;
+    bottom: 90px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.details {
+    text-align: center;
+}
+
+.extra {
+    margin-top: 9px;
+    font-size: 18px;
+    color: #000000;
+}
+
+.name {
+    color: #2F4F4F;
+}
+
+@media screen and (max-width: 750px) {
+    .people {
+        grid-template-columns: repeat(2, 200px);
+      }
+}
+
+@media screen and (min-width: 1010px) {
+  .people {
+      grid-template-columns: repeat(4, 200px);
+    }
 }
