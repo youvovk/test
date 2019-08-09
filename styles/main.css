@@ -29,6 +29,12 @@ h1 {
   transition: width 1s linear, transform 1s linear;
   transition: width 1s linear, transform 1s linear, -webkit-transform 1s linear; }
 
+.extra {
+  display: none;
+  margin-top: 9px;
+  font-size: 18px;
+  color: #000; }
+
 .person:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
@@ -77,12 +83,6 @@ h1 {
 
 .details {
   text-align: center; }
-
-.extra {
-  display: none;
-  margin-top: 9px;
-  font-size: 18px;
-  color: #000; }
 
 .name {
   color: #2f4f4f; }
