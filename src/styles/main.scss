@@ -6,7 +6,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 210px));
   justify-content: center;
-  grid-gap: 30px;
+  grid-gap: 10px 30px;
+  margin-top: 50px;
 
   font-family: Arial, sans-serif;
   font-size: 20px;
@@ -15,30 +16,39 @@
 
 .person {
   padding: 6px;
-  height: 225px;
-  overflow: hidden;
-  transition: widtn 1s linear, transform 1s linear;
+  width: 205px;
+  height: 260px;
+  transition: width 1s linear, transform 1s linear;
+}
+
+.extra {
+  display: none;
+  margin-top: 9px;
+  font-size: 18px;
+  color: #000;
 }
 
 .person:hover {
-  width: 264px;
-  height: 320px;
+  transform: scale(1.2);
   background: #eee;
   border-radius: 10px;
   z-index: 1;
-  overflow: visible;
+
+  .extra {
+    display: block;
+  }
+
+  & :first-child {
+    border-radius: 25%;
+  }
 }
 
 .img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-}
-
-.img:hover {
-  width: 240px;
-  height: 240px;
-  border-radius: 25%;
+  margin-bottom: 5px;
+  transition: all 1s linear;
 }
 
 .photo {
@@ -70,12 +80,6 @@
 
 .details {
   text-align: center;
-}
-
-.extra {
-  margin-top: 9px;
-  font-size: 18px;
-  color: #000;
 }
 
 .name {

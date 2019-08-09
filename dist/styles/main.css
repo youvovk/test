@@ -14,37 +14,39 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  grid-gap: 30px;
+  grid-gap: 10px 30px;
+  margin-top: 50px;
   font-family: Arial, sans-serif;
   font-size: 20px;
   color: #2f4f4f; }
 
 .person {
   padding: 6px;
-  height: 225px;
-  overflow: hidden;
-  -webkit-transition: widtn 1s linear, -webkit-transform 1s linear;
-  transition: widtn 1s linear, -webkit-transform 1s linear;
-  transition: widtn 1s linear, transform 1s linear;
-  transition: widtn 1s linear, transform 1s linear, -webkit-transform 1s linear; }
+  width: 205px;
+  height: 260px;
+  -webkit-transition: width 1s linear, -webkit-transform 1s linear;
+  transition: width 1s linear, -webkit-transform 1s linear;
+  transition: width 1s linear, transform 1s linear;
+  transition: width 1s linear, transform 1s linear, -webkit-transform 1s linear; }
 
 .person:hover {
-  width: 264px;
-  height: 320px;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
   background: #eee;
   border-radius: 10px;
-  z-index: 1;
-  overflow: visible; }
+  z-index: 1; }
+  .person:hover .extra {
+    display: block; }
+  .person:hover :first-child {
+    border-radius: 25%; }
 
 .img {
   width: 200px;
   height: 200px;
-  border-radius: 50%; }
-
-.img:hover {
-  width: 240px;
-  height: 240px;
-  border-radius: 25%; }
+  border-radius: 50%;
+  margin-bottom: 5px;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear; }
 
 .photo {
   display: -webkit-box;
@@ -77,6 +79,7 @@ h1 {
   text-align: center; }
 
 .extra {
+  display: none;
   margin-top: 9px;
   font-size: 18px;
   color: #000; }
